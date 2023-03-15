@@ -1,0 +1,176 @@
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #000000;
+}
+
+.btn-primary {
+  color: #ffffff;
+  background-color: #646464;
+  border-color: #6e6e6e;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #ffffff;
+  background-color: #646464;
+  border-color: #6e6e6e;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #000000;
+}
+.border-bottom {
+  border-bottom: 1px solid #000000;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+ 
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+  background-color: rgb(0, 0, 0);
+}
+
+.bgColor {
+    background-color: rgb(255, 255, 255);
+}
+
+.container {
+  min-height: 100%;
+}
+
+.my-navbar {
+  background-color: #ff0000; /* red */
+}
+
+.form-container {
+  margin-left: 20%;
+  margin-top: 5%;
+  width: 1080px;
+  height: 500px;
+  background-color: #2b2b2b;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.labelFont {
+  color: white;
+}
+
+
+
+.posting-box {
+  height: 10px;
+  margin: 0 auto;
+  width: 50%;
+  height: 70%;
+  border: 1px solid black;
+  padding: 200px;
+  background-color: #2b2b2b;
+  color: white;
+  margin-top: 200px;
+  margin-bottom: 250px;
+  align-items: center;
+}
+
+.forgot-password {
+  color: rgb(255, 255, 255);
+}
+
+.create-account {
+  color: rgb(255, 255, 255);
+}
+
+.form-group-upload {
+  margin-bottom: 20px;
+}
+
+.form-group-upload input[type="file"] {
+  display: block;
+  margin: 0 auto;
+}
+
+.post img {
+  max-width: 100%;
+  height: auto;
+  
+}
+
+
+img.profile-pic {
+  max-width: 200px;
+  max-height: 200px;
+  object-fit: contain;
+}
+
+.posting-box img {
+  max-width: 100%;
+}
+
+.navbar-nav .nav-link {
+  color: #fff !important;
+}
+
+/* Sets background color to green when item is focused/hovered */
+.dropdown-menu-dark .dropdown-item:focus, 
+.dropdown-menu-dark .dropdown-item:hover {
+  background-color: #00471e !important;
+}
+.dropdown-menu-dark .dropdown-item {
+  color: #fff;
+}
+.dropdown-menu {
+  background-color: #245148;
+}
+
+.btn-custom {
+  background-color: #8cccbb;
+  color: rgb(255, 255, 255);
+}
