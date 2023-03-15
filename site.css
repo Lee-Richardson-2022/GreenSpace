@@ -1,176 +1,137 @@
-a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+/*-- fonts --*/
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+/*-- root vars --*/
+:root {
+    --main-bg-color: #FCFCFC;
+    --white: #FFFFFF;
+    --main-text-colour: 29, 29, 29;
+    --primary: 52, 211, 153;
+    --warning: 250, 197, 21;
+    --danger: 255, 93, 94;
 }
 
+/*-- body --*/
 
-/* Provide sufficient contrast against white background */
-a {
-  color: #000000;
-}
-
-.btn-primary {
-  color: #ffffff;
-  background-color: #646464;
-  border-color: #6e6e6e;
+body{
+    background-color: var(--main-bg-color);
 }
 
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #ffffff;
-  background-color: #646464;
-  border-color: #6e6e6e;
+/*-- Text --*/
+*{
+    font-family: "IBM Plex Sans", serif;
+    color: var(--main-text-colour);
 }
 
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  font-size: 14px;
-}
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+.data-font{
+    font-family: "IBM Plex Mono", monospace;
 }
 
-.border-top {
-  border-top: 1px solid #000000;
-}
-.border-bottom {
-  border-bottom: 1px solid #000000;
+h1{
+    font-size: 40px;
+    font-weight: 600;
+
+    margin-bottom: 15px;
 }
 
-.box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+/*-- Buttons --*/
+
+/* Primary */
+.button-primary{
+    color: var(--white);
+    background-color: rgba(var(--primary), 1);
+
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 24px;
+
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    border-radius: 100px;
+
+    margin-right: 10px;
 }
 
-button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
+.button-primary:hover{
+    background-color: rgba(var(--primary), 0.8);
 }
 
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  position: relative;
-  min-height: 100%;
+.button-primary:active,
+.button-primary.current{
+    background-color: rgba(var(--primary), 1);
+    box-shadow: 0 0 0 4px rgba(var(--primary), 0.5);   
 }
 
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
- 
-}
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
-  background-color: rgb(0, 0, 0);
-}
+/* Warning */
+.button-warning{
+    color: var(--white);
+    background-color: rgba(var(--warning), 1);
 
-.bgColor {
-    background-color: rgb(255, 255, 255);
-}
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 24px;
 
-.container {
-  min-height: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    border-radius: 100px;
+
+    margin-right: 10px;
 }
 
-.my-navbar {
-  background-color: #ff0000; /* red */
+.button-warning:hover{
+    background-color: rgba(var(--warning), 0.8);
 }
 
-.form-container {
-  margin-left: 20%;
-  margin-top: 5%;
-  width: 1080px;
-  height: 500px;
-  background-color: #2b2b2b;
-  color: white;
-  padding: 20px;
-  border-radius: 10px;
-  
+.button-warning:active,
+.button-warning.current{
+    background-color: rgba(var(--warning), 1);
+    box-shadow: 0 0 0 4px rgba(var(--warning), 0.5);   
 }
 
-.form-container form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* Danger */
+.button-danger{
+    color: var(--white);
+    background-color: rgba(var(--danger), 1);
+
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 24px;
+
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    border-radius: 100px;
+
+    margin-right: 10px;
 }
 
-.labelFont {
-  color: white;
+.button-danger:hover{
+    background-color: rgba(var(--danger), 0.8);
 }
 
-
-
-.posting-box {
-  height: 10px;
-  margin: 0 auto;
-  width: 50%;
-  height: 70%;
-  border: 1px solid black;
-  padding: 200px;
-  background-color: #2b2b2b;
-  color: white;
-  margin-top: 200px;
-  margin-bottom: 250px;
-  align-items: center;
+.button-danger:active,
+.button-danger.current{
+    background-color: rgba(var(--danger), 1);
+    box-shadow: 0 0 0 4px rgba(var(--danger), 0.5);   
 }
 
-.forgot-password {
-  color: rgb(255, 255, 255);
+/* Secondary */
+.button-secondary{
+    color: rgba(var(--primary), 1);
+
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 20px;
 }
 
-.create-account {
-  color: rgb(255, 255, 255);
-}
-
-.form-group-upload {
-  margin-bottom: 20px;
-}
-
-.form-group-upload input[type="file"] {
-  display: block;
-  margin: 0 auto;
-}
-
-.post img {
-  max-width: 100%;
-  height: auto;
-  
-}
-
-
-img.profile-pic {
-  max-width: 200px;
-  max-height: 200px;
-  object-fit: contain;
-}
-
-.posting-box img {
-  max-width: 100%;
-}
-
-.navbar-nav .nav-link {
-  color: #fff !important;
-}
-
-/* Sets background color to green when item is focused/hovered */
-.dropdown-menu-dark .dropdown-item:focus, 
-.dropdown-menu-dark .dropdown-item:hover {
-  background-color: #00471e !important;
-}
-.dropdown-menu-dark .dropdown-item {
-  color: #fff;
-}
-.dropdown-menu {
-  background-color: #245148;
-}
-
-.btn-custom {
-  background-color: #8cccbb;
-  color: rgb(255, 255, 255);
+.button-secondary:hover{
+    text-decoration: underline;
 }
