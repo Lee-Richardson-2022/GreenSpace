@@ -29,8 +29,8 @@
         }
 
 
-        $chartArray[] = new chart('chart0','chartLegalCompliance'); // Add new chart
-        $chartArray[] = new chart('chart1','chartLegalCompliance');
+        $chartArray[] = new chart('chart0','chartLegalCompliance'); // Add new test chart
+        $chartArray[] = new chart('chart1','chartOutstandingActions');
         $chartArray[] = new chart('chart2','chartLegalCompliance');
     
 
@@ -41,11 +41,11 @@
 
     <div>
         <?php
-        for ($i = 0, $size = count($chartArray); $i < $size; $i++) {
-            $id = "chart" . $i;
-            $container = '<div class="chartContainer" id="' . $id . '"></div>';
-            echo "$container";
-            $chartArray[$i]->drawChart();
+        for ($i = 0, $size = count($chartArray); $i < $size; $i++) { //For each chart
+            $id = "chart" . $i; //generate the container's number
+            $container = '<div class="chartContainer" id="' . $id . '"></div>'; //Generate the containers Id
+            echo "$container"; //Prints the container
+            $chartArray[$i]->drawChart(); //Puts a chart in the container
         }        
         ?>
     </div>
