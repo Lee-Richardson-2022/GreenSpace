@@ -1,6 +1,14 @@
 /*-- fonts --*/
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
+*{
+    box-sizing: border-box;
+}
+
+.main-container{
+    padding: 5vw;
+}
+
 /*-- root vars --*/
 :root {
     --main-bg-color: #FCFCFC;
@@ -124,10 +132,10 @@ h1{
 
 /*-- Widget Classes--*/
 .container {
-    margin-right: 300px;
+    display: grid;
+    width: 45vw;
   }
 .draggable {
-    box-sizing: border-box;
     padding: 3rem;
     background-color: white;
     cursor: move;
@@ -135,6 +143,7 @@ h1{
     height: 300px;
     border-radius: 20px;
     box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.05);
+    margin: 20px;
    
   }
 .draggable.dragging {

@@ -23,7 +23,7 @@
     </div>
 </div>
 
-<div style="display: flex; padding: 100px;">
+<div style="display: flex; padding: 5vw;">
     <div class="container">
         <p>Dashboard</p>
 
