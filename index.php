@@ -42,7 +42,13 @@
         <a href="#" class="button button-primary current">My Dashboard</a>
         <a href="#" class="button button-primary">Waterman</a> 
     </div>
-    <button class="button-secondary" onclick="openNav()">edit widgets</button>
+    <button class="button-secondary" id="edit" onclick="startEdit()">edit widgets</button>
+
+    <div id="editing">
+        <button class="button-secondary" onclick="openNav()">add widgets</button>
+        <button class="button-secondary" onclick="endEdit()">done</button>
+    </div>
+
     <div style="display: flex;">
     </div>
 

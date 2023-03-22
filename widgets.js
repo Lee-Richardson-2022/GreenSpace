@@ -47,3 +47,14 @@ function openNav() {
 function closeNav() {
   document.getElementById("add-widget-sidebar").style.visibility = "hidden";
 }
+
+function startEdit() {
+  document.getElementById("edit").style.display = "none";
+  document.getElementById("editing").style.display = "block";
+
+}
+function endEdit() {
+  document.getElementById("edit").style.display = "block";
+  document.getElementById("editing").style.display = "none";
+  document.getElementById("add-widget-sidebar").style.visibility = "hidden";
+}
