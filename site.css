@@ -132,7 +132,6 @@ h1{
 
 /*-- Widget Classes--*/
 .container {
-    display: grid;
     width: 45vw;
   }
 .draggable {
