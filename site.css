@@ -154,14 +154,18 @@ h1{
 .draggable.dragging {
     opacity: .5;
   }
+.draggable.wide {
+    width: 640px;
+}
 
   /*-- Sidebar --*/
 
   .sidebar{
+    visibility: hidden;
     display: flex;
     align-items: center;
     position: fixed;
-    margin-left: 100vw;
+    margin-left: 70vw;
     width: 30vw;
     height: 100vh;
     z-index: 999999;

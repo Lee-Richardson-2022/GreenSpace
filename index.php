@@ -48,7 +48,7 @@
 
     <div class="container">
         <p class="draggable" draggable="true">Widget 1</p>
-        <p class="draggable" draggable="true">Widget 2</p>
+        <p class="draggable wide" draggable="true">Widget 2</p>
         <p class="draggable" draggable="true">Widget 4</p>
         <p class="draggable" draggable="true">Widget 4</p>
         <p class="draggable" draggable="true">Widget 4</p>

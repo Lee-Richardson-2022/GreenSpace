@@ -41,9 +41,9 @@ function getDragAfterElement(container, y) {
 // Sidebar
 
 function openNav() {
-  document.getElementById("add-widget-sidebar").style.marginLeft = "70vw";
+  document.getElementById("add-widget-sidebar").style.visibility = "visible";
 }
 
 function closeNav() {
-  document.getElementById("add-widget-sidebar").style.marginLeft = "100vw";
+  document.getElementById("add-widget-sidebar").style.visibility = "hidden";
 }
