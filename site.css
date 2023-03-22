@@ -109,6 +109,7 @@ h1{
 }
 
 .timeline-button{
+
     border-radius: 10px;
     width: 20px; 
     height: 20px; 
@@ -137,7 +138,6 @@ h1{
 .draggable {
     padding: 3rem;
     background-color: white;
-    cursor: move;
     width: 300px;
     height: 300px;
     border-radius: 20px;

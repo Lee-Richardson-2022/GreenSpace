@@ -18,16 +18,16 @@
     </div>
     <a href="#" class="button-secondary">edit widgets</a>
     <div style="display: flex;">
-        <div class="timeline-button"></div>
-        <div class="timeline-button current"></div>
     </div>
 </div>
 
 <div style="display: flex; padding: 5vw;">
     <div class="container">
         <p>Dashboard</p>
-        
-        <p class="draggable" draggable="true">1</p>
+
+        <div class="draggable" draggable="true">
+            <div class="timeline-button"></div>
+        </div>
         <p class="draggable" draggable="true">2</p>
     </div>
     <div class="container">
