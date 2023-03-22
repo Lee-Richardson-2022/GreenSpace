@@ -154,6 +154,7 @@ h1{
     margin-left: 0;
     margin-bottom: 30px;
     margin-right: 30px;
+    position: relative;
   }
 .draggable.dragging {
     opacity: .5;
@@ -199,4 +200,14 @@ h1{
 }
 #edit-btn{
     display: block;
+}
+.delete-button{
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(var(--danger), 1);
+    border-radius: 0 20px 0 5px;
 }

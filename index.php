@@ -18,13 +18,34 @@
         </div>
 
         <div class="sidebar-scroll">
-            <p class="draggable" draggable="true">Widget 3</p>
-            <p class="draggable" draggable="true">Widget 4</p>
-            <p class="draggable" draggable="true">Widget 4</p>
-            <p class="draggable" draggable="true">Widget 4</p>
-            <p class="draggable" draggable="true">Widget 4</p>
-            <p class="draggable" draggable="true">Widget 4</p>
-            <p class="draggable" draggable="true">Widget 4</p>
+            <div class="draggable" draggable="true">
+                <p>Widget</p>
+                <div class="delete-button"></div>
+            </div>
+            <div class="draggable" draggable="true">
+                <p>Widget</p>
+                <div class="delete-button"></div>
+            </div>
+            <div class="draggable" draggable="true">
+                <p>Widget</p>
+                <div class="delete-button"></div>
+            </div>
+            <div class="draggable" draggable="true">
+                <p>Widget</p>
+                <div class="delete-button"></div>
+            </div>
+            <div class="draggable" draggable="true">
+                <p>Widget</p>
+                <div class="delete-button"></div>
+            </div>
+            <div class="draggable" draggable="true">
+                <p>Widget</p>
+                <div class="delete-button"></div>
+            </div>
+            <div class="draggable" draggable="true">
+                <p>Widget</p>
+                <div class="delete-button"></div>
+            </div>
         </div>
 
         <div class="sidebar-footer">
@@ -52,13 +73,35 @@
     <div style="display: flex;">
     </div>
 
-    <div class="container">
-        <p class="draggable" draggable="true">Widget 1</p>
-        <p class="draggable wide" draggable="true">Widget 2</p>
-        <p class="draggable" draggable="true">Widget 4</p>
-        <p class="draggable" draggable="true">Widget 4</p>
-        <p class="draggable" draggable="true">Widget 4</p>
-        <p class="draggable" draggable="true">Widget 4</p>
+    <div class="container" id="main">
+    <div class="draggable" draggable="true">
+                <p>Widget</p>
+                <div class="delete-button"></div>
+            </div>
+            <div class="draggable" draggable="true">
+                <p>Widget</p>
+                <div class="delete-button"></div>
+            </div>
+            <div class="draggable wide" draggable="true">
+                <p>Widget</p>
+                <div class="delete-button"></div>
+            </div>
+            <div class="draggable" draggable="true">
+                <p>Widget</p>
+                <div class="delete-button"></div>
+            </div>
+            <div class="draggable" draggable="true">
+                <p>Widget</p>
+                <div class="delete-button"></div>
+            </div>
+            <div class="draggable" draggable="true">
+                <p>Widget</p>
+                <div class="delete-button"></div>
+            </div>
+            <div class="draggable" draggable="true">
+                <p>Widget</p>
+                <div class="delete-button"></div>
+            </div>
     </div>
 </div>
 

@@ -1,5 +1,5 @@
-const draggables = document.querySelectorAll('.draggable')
-const containers = document.querySelectorAll('.container')
+  const draggables = document.querySelectorAll('.draggable')
+  const containers = document.querySelectorAll('.container')
 
 draggables.forEach(draggable => {
   draggable.addEventListener('dragstart', () => {
@@ -52,9 +52,25 @@ function startEdit() {
   document.getElementById("edit").style.display = "none";
   document.getElementById("editing").style.display = "block";
 
+  const widgets = document
+  .getElementById('main')
+  .getElementsByClassName("delete-button");
+
+  for (let i = 0; i < widgets.length; i++) {
+    widgets[i].style.visibility = "visible";
+  }
+
 }
 function endEdit() {
   document.getElementById("edit").style.display = "block";
   document.getElementById("editing").style.display = "none";
   document.getElementById("add-widget-sidebar").style.visibility = "hidden";
+
+  const widgets = document
+  .getElementById('main')
+  .getElementsByClassName("delete-button");
+
+  for (let i = 0; i < widgets.length; i++) {
+    widgets[i].style.visibility = "hidden";
+  }
 }
