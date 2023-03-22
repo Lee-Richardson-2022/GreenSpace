@@ -8,11 +8,33 @@
     
     <link rel="stylesheet" href="site.css">
 
-    <?php require("navbar.php"); // adding the navbar
-
-    ?>
 </head>
 <body>
+
+<div class="sidebar" id="add-widget-sidebar">
+        <div class="sidebar-title">
+            <h2>Add Widgets</h2>
+            <p>Drag and Drop Widgets onto your Dashboard</p>
+        </div>
+
+        <div class="sidebar-scroll">
+            <p class="draggable" draggable="true">Widget 3</p>
+            <p class="draggable" draggable="true">Widget 4</p>
+            <p class="draggable" draggable="true">Widget 4</p>
+            <p class="draggable" draggable="true">Widget 4</p>
+            <p class="draggable" draggable="true">Widget 4</p>
+            <p class="draggable" draggable="true">Widget 4</p>
+            <p class="draggable" draggable="true">Widget 4</p>
+        </div>
+
+        <div class="sidebar-footer">
+            <a href="javascript:void(0)" class="button button-primary" onclick="closeNav()">Done</a>
+        </div>
+    </div>
+
+<?php //require("navbar.php"); // adding the navbar
+
+?>
     
 <div class="main-container">
     <h1>My Performance Dashboard</h1>
@@ -20,25 +42,17 @@
         <a href="#" class="button button-primary current">My Dashboard</a>
         <a href="#" class="button button-primary">Waterman</a> 
     </div>
-    <a href="#" class="button-secondary">edit widgets</a>
+    <button class="button-secondary" onclick="openNav()">edit widgets</button>
     <div style="display: flex;">
     </div>
-</div>
 
-<div style="display: flex; padding: 5vw;">
     <div class="container">
-        <p>Dashboard</p>
-
-        <div class="draggable" draggable="true">
-            <div class="timeline-button"></div>
-        </div>
-        <p class="draggable" draggable="true">2</p>
-    </div>
-    <div class="container">
-        <p>Unused Widgets</p>
-
-        <p class="draggable" draggable="true">3</p>
-        <p class="draggable" draggable="true">4</p>
+        <p class="draggable" draggable="true">Widget 1</p>
+        <p class="draggable" draggable="true">Widget 2</p>
+        <p class="draggable" draggable="true">Widget 4</p>
+        <p class="draggable" draggable="true">Widget 4</p>
+        <p class="draggable" draggable="true">Widget 4</p>
+        <p class="draggable" draggable="true">Widget 4</p>
     </div>
 </div>
 

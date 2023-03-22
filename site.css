@@ -6,7 +6,7 @@
 }
 
 .main-container{
-    padding: 5vw;
+    padding: 35px 5vw 0 5vw;
 }
 
 /*-- root vars --*/
@@ -22,7 +22,8 @@
 /*-- body --*/
 
 body{
-    background-color: var(--main-bg-color);
+    background-color: var(--main-bg-color) !important;
+    margin: 0;
 }
 
 /*-- Text --*/
@@ -98,6 +99,10 @@ h1{
 }
 /* Secondary */
 .button-secondary{
+    background: none;
+    border: none;
+
+
     color: rgba(var(--primary), 1);
 
     text-decoration: none;
@@ -133,8 +138,10 @@ h1{
 
 /*-- Widget Classes--*/
 .container {
-    width: 45vw;
-  }
+    display: flex;
+    flex-wrap: wrap;
+}
+   
 .draggable {
     padding: 3rem;
     background-color: white;
@@ -143,8 +150,38 @@ h1{
     border-radius: 20px;
     box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.05);
     margin: 20px;
-   
   }
 .draggable.dragging {
     opacity: .5;
+  }
+
+  /*-- Sidebar --*/
+
+  .sidebar{
+    display: flex;
+    align-items: center;
+    position: fixed;
+    margin-left: 100vw;
+    width: 30vw;
+    height: 100vh;
+    z-index: 999999;
+    background-color: var(--main-bg-color);
+    padding: 40px;
+    box-shadow: -10px 0px 20px 0 rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
+  .sidebar-scroll{
+    height: 85vh;
+    overflow: scroll;
+    width: 340px;
+  }
+  .sidebar-title{
+    height: 10vh;
+    width: 25vw;
+  }
+  .sidebar-footer{
+    height: 5vh;
+    padding-top: auto;
   }

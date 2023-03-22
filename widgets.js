@@ -11,7 +11,7 @@ draggables.forEach(draggable => {
   })
 })
 
-containers.forEach(container => {
+containers.forEach(container => { 
   container.addEventListener('dragover', e => {
     e.preventDefault()
     const afterElement = getDragAfterElement(container, e.clientY)
@@ -36,4 +36,14 @@ function getDragAfterElement(container, y) {
       return closest
     }
   }, { offset: Number.NEGATIVE_INFINITY }).element
+}
+
+// Sidebar
+
+function openNav() {
+  document.getElementById("add-widget-sidebar").style.marginLeft = "70vw";
+}
+
+function closeNav() {
+  document.getElementById("add-widget-sidebar").style.marginLeft = "100vw";
 }
