@@ -3,7 +3,20 @@
 <!-- Include fusion theme -->
 <script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"></script>
 
-<!-- Chart -->
+<?php
+
+    $db = new SQLite3('Greenspace.db');
+
+    function fetchData($query) {
+        global $db;
+        $statement = $db->prepare($query);
+        $result = $statement->execute();
+
+        $data = $result->fetchArray(SQLITE3_NUM);
+        return $data;
+    }
+?>
+
 <script>
     function renderChart(chartConfig) { //Draws the chart
         FusionCharts.ready(function(){
@@ -16,6 +29,7 @@
 
 <?php
 function chartLegalCompliance($location) { //Configures chartConfig, then sends it to be rendered
+    $data = fetchData('SELECT ComplianceRed, ComplianceAmber, ComplianceGreen FROM tblLegalRegister WHERE ClientID = 1');
     ?><script>
         var chartConfig = {
         type: 'column2d', //Chart type, a list of chart types is listed of fusionchart's website:
@@ -35,15 +49,15 @@ function chartLegalCompliance($location) { //Configures chartConfig, then sends 
                     "data": [
                         {
                             "label": "Highly Likely",
-                            "value": "5",
+                            "value": <?php echo json_encode($data[0]); ?>,
                             "color": "#FF0000"    
                         } , {
                             "label": "Possible",
-                            "value": "3",
+                            "value": <?php echo json_encode($data[1]); ?>,
                             "color": "#FFBF00" 
                         } , {
                             "label": "Safe",
-                            "value": "16",
+                            "value": <?php echo json_encode($data[2]); ?>,
                             "color": "#00CC00"      
                         }
                     ]

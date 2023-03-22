@@ -29,10 +29,12 @@
         }
 
 
-        $chartArray[] = new chart('chart0','chartLegalCompliance'); // Add new test chart
-        $chartArray[] = new chart('chart1','chartOutstandingActions');
-        $chartArray[] = new chart('chart2','chartLegalCompliance');
-    
+        $jsonFile = file_get_contents('dashboard.json'); //import the user's dashboard
+        $storedCharts = json_decode($jsonFile, true); //Store the dashboard in an array
+
+        foreach($storedCharts as $chart) { //For each stored chart
+            $chartArray[] = new chart($chart['id'],$chart['type']); //Add it to chartArray as a chart object
+        }
 
         //store chart id and chart type as object, store objects in array, loop through array,
         //call drawChart for each object
