@@ -8,6 +8,9 @@
     
     <link rel="stylesheet" href="site.css">
 
+    <?php include_once('widgets.php');
+    ?>
+
 </head>
 <body>
 
@@ -74,34 +77,10 @@
     </div>
 
     <div class="container" id="main">
-    <div class="draggable" draggable="true">
-                <p>Widget</p>
-                <div class="delete-button"></div>
-            </div>
-            <div class="draggable" draggable="true">
-                <p>Widget</p>
-                <div class="delete-button"></div>
-            </div>
-            <div class="draggable wide" draggable="true">
-                <p>Widget</p>
-                <div class="delete-button"></div>
-            </div>
-            <div class="draggable" draggable="true">
-                <p>Widget</p>
-                <div class="delete-button"></div>
-            </div>
-            <div class="draggable" draggable="true">
-                <p>Widget</p>
-                <div class="delete-button"></div>
-            </div>
-            <div class="draggable" draggable="true">
-                <p>Widget</p>
-                <div class="delete-button"></div>
-            </div>
-            <div class="draggable" draggable="true">
-                <p>Widget</p>
-                <div class="delete-button"></div>
-            </div>
+        <?php 
+        Timeline();
+        Progress();
+        ?>
     </div>
 </div>
 
