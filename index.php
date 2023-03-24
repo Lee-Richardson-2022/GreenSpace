@@ -31,18 +31,19 @@
 <?php require("navbar.php");?>
     
 <div class="main-container">
-    <h1>My Performance Dashboard</h1>
-    <div style="display: flex; flex-direction: row; padding-bottom: 10px;"">
-        <a href="#" class="button button-primary current">My Dashboard</a>
-        <a href="#" class="button button-primary">Waterman</a> 
-    </div>
-    <button class="button-secondary" id="edit" onclick="startEdit()">edit widgets</button>
+    <div class="dashboard-header">
+        <h1>My Performance Dashboard</h1>
+        <div style="display: flex; flex-direction: row; padding-bottom: 10px;"">
+            <a href="#" class="button button-primary current">My Dashboard</a>
+            <a href="#" class="button button-primary">Waterman</a> 
+        </div>
+        <button class="button-secondary" id="edit" onclick="startEdit()">edit widgets</button>
 
-    <div id="editing">
-        <button class="button-secondary" onclick="openNav()">add widgets</button>
-        <button class="button-secondary" onclick="endEdit()">done</button>
+        <div id="editing">
+            <button class="button-secondary" onclick="openNav()">add widgets</button>
+            <button class="button-secondary" onclick="endEdit()">done</button>
+        </div>
     </div>
-
     <div style="display: flex;">
     </div>
 
