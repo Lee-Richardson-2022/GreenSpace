@@ -1,4 +1,5 @@
 <?php
+include_once('charts.php');
 
 function DelBtn(){ ?>
     <button class="delete-button">&times</button>
@@ -11,9 +12,7 @@ function Timeline(){ ?>
     <p>Timeline</p>
 </div> 
 
-<?php } ?>
-
-<?php
+<?php } 
 
 function Progress(){ ?>
 
@@ -21,5 +20,17 @@ function Progress(){ ?>
     <?php DelBtn() ?>
     <p>Progress</p>
 </div> 
+
+<?php } 
+
+function BarChart(){ ?>
+
+    <div class="draggable wide" draggable="false">
+        <?php DelBtn(); ?>
+        <div id="barchart">
+            <?php chartLegalCompliance('barchart');
+            ?>
+        </div>
+    </div> 
 
 <?php } ?>

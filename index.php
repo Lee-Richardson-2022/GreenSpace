@@ -51,6 +51,7 @@
         <?php 
         Timeline();
         Progress();
+        BarChart();
         ?>
     </div>
 </div>
