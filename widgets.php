@@ -48,4 +48,16 @@ function Bulb(){ ?>
         </div>
     </div> 
 
-<?php } ?>
+<?php } 
+
+function DueActions(){ ?>
+
+    <div class="draggable" draggable="false">
+        <?php DelBtn() ?>
+        <div id="due-actions" class="chart-container">
+            <?php chartDueActions('due-actions');
+            ?>
+        </div>
+    </div> 
+    
+    <?php } ?>

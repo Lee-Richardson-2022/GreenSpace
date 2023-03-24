@@ -20,7 +20,8 @@
         </div>
 
         <?php
-        Progress();
+        Bulb();   
+        CompliancePie();     
         ?>
 
         <div class="sidebar-footer">
@@ -49,10 +50,8 @@
 
     <div class="container" id="main">
         <?php 
-        Bulb();
-        Progress();
         ComplianceBar();
-        CompliancePie();
+        DueActions();
         ?>
     </div>
 </div>

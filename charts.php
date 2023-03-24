@@ -125,6 +125,7 @@ function chartLegalCompliancePie($location) { //Configures chartConfig, then sen
 
 
 function chartDueActions($location) { //Configures chartConfig, then sends it to be rendered
+    $data = fetchData('SELECT COUNT(*) FROM ClientTask WHERE ClientID = 1 AND Status = "Due"');
     ?><script>
         var chartConfig = {
         type: 'angulargauge',
@@ -138,6 +139,8 @@ function chartDueActions($location) { //Configures chartConfig, then sends it to
                         "subcaption": "Counted",
                         "lowerLimit": "0",
                         "upperLimit": "20",
+                        "showTooltip": "0",
+                        "showValue": "1",
                         "theme": "fusion"
                     },
                     "colorRange": {
@@ -157,7 +160,7 @@ function chartDueActions($location) { //Configures chartConfig, then sends it to
                     },
                     "dials": {
                         "dial": [{
-                        "value": "13"
+                        "value": <?php echo json_encode($data[0]); ?>
                         }]
                     }
                 }
@@ -168,7 +171,8 @@ function chartDueActions($location) { //Configures chartConfig, then sends it to
 }
 
 function chartOutstandingActions($location) { //Configures chartConfig, then sends it to be rendered
-    ?><script>
+    $data = fetchData('SELECT COUNT(*) FROM ClientTask WHERE ClientID = 1 AND Status = "Outstanding"');
+    ?><script>        
         var chartConfig = {
         type: 'bulb',
         renderAt: <?php echo json_encode($location); ?>,
@@ -184,6 +188,7 @@ function chartOutstandingActions($location) { //Configures chartConfig, then sen
                         "placevaluesinside": "1",
                         "valuefontsize": "20",
                         "valueFontColor": "#FFFFFF",
+                        "showToolTip": "0",
                         "theme": "fusion"
                     },
                     "colorRange": {
@@ -191,17 +196,14 @@ function chartOutstandingActions($location) { //Configures chartConfig, then sen
                         "minValue": "0",
                         "maxValue": "0",
                         "code": colourGreen
-                        }, {
-                        "minValue": "1",
-                        "maxValue": "1",
-                        "code": colourAmber
-                        }, {
+                        },{
                         "minValue": "1",
                         "maxValue": "20",
                         "code": colourRed
                         }]
                     },
-                    value: "0"
+                    value: <?php echo json_encode($data[0]); ?>
+                    
                 }
             }
     renderChart(chartConfig);
