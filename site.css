@@ -226,3 +226,7 @@ h1{
     padding-bottom: 10px;
     padding-top: 10px;
 }
+
+.chart-container{
+    height: 280px ;
+}
