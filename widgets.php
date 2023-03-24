@@ -27,7 +27,7 @@ function BarChart(){ ?>
 
     <div class="draggable wide" draggable="false">
         <?php DelBtn(); ?>
-        <div id="barchart">
+        <div id="barchart" style="height: 280px ;">
             <?php chartLegalCompliance('barchart');
             ?>
         </div>
