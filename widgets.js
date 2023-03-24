@@ -29,6 +29,8 @@ containers.forEach(container => {
       for (let i = 0; i < delButtons.length; i++) {
         delButtons[i].style.visibility = "visible";
       }
+
+
     }
   })
 })
@@ -106,4 +108,5 @@ function endEdit() {
   for (let i = 0; i < draggables.length; i++) {
     draggables[i].setAttribute("draggable", "false")
   }
+  
 }
