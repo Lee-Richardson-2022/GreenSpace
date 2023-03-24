@@ -216,3 +216,7 @@ h1{
     font-size: 35px;
     color: var(--white);
 }
+
+.chart-container{
+    height: 280px ;
+}

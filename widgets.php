@@ -5,14 +5,29 @@ function DelBtn(){ ?>
     <button class="delete-button">&times</button>
 <?php } 
 
-function Timeline(){ ?>
+function ComplianceBar(){ ?>
 
-<div class="draggable wide" draggable="false" id="timeline">
+<div class="draggable wide" draggable="false">
     <?php DelBtn() ?>
-    <p>Timeline</p>
+    <div id="compliance-bar" class="chart-container">
+        <?php chartLegalComplianceBar('compliance-bar');
+        ?>
+    </div>
 </div> 
 
 <?php } 
+
+function CompliancePie(){ ?>
+
+    <div class="draggable" draggable="false">
+        <?php DelBtn() ?>
+        <div id="compliance-pie" class="chart-container">
+            <?php chartLegalCompliancePie('compliance-pie');
+            ?>
+        </div>
+    </div> 
+    
+    <?php } 
 
 function Progress(){ ?>
 
@@ -23,12 +38,12 @@ function Progress(){ ?>
 
 <?php } 
 
-function BarChart(){ ?>
+function Bulb(){ ?>
 
-    <div class="draggable wide" draggable="false">
+    <div class="draggable" draggable="false">
         <?php DelBtn(); ?>
-        <div id="barchart" style="height: 280px ;">
-            <?php chartLegalCompliance('barchart');
+        <div id="bulb" class="chart-container">
+            <?php chartOutstandingActions('bulb');
             ?>
         </div>
     </div> 

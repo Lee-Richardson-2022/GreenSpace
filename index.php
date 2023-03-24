@@ -49,9 +49,10 @@
 
     <div class="container" id="main">
         <?php 
-        Timeline();
+        Bulb();
         Progress();
-        BarChart();
+        ComplianceBar();
+        CompliancePie();
         ?>
     </div>
 </div>
