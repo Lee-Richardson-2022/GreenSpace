@@ -20,6 +20,15 @@ containers.forEach(container => {
       container.appendChild(draggable)
     } else {
       container.insertBefore(draggable, afterElement)
+
+      // Adds delete button to new widgets after drag
+      const delButtons = document
+        .getElementById('main')
+        .getElementsByClassName("delete-button");
+
+      for (let i = 0; i < delButtons.length; i++) {
+        delButtons[i].style.visibility = "visible";
+      }
     }
   })
 })

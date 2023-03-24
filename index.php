@@ -19,36 +19,9 @@
             <h2>Add Widgets</h2>
         </div>
 
-        <div class="sidebar-scroll">
-            <div class="draggable" draggable="true">
-                <p>Widget</p>
-                <div class="delete-button"></div>
-            </div>
-            <div class="draggable" draggable="true">
-                <p>Widget</p>
-                <div class="delete-button"></div>
-            </div>
-            <div class="draggable" draggable="true">
-                <p>Widget</p>
-                <div class="delete-button"></div>
-            </div>
-            <div class="draggable" draggable="true">
-                <p>Widget</p>
-                <div class="delete-button"></div>
-            </div>
-            <div class="draggable" draggable="true">
-                <p>Widget</p>
-                <div class="delete-button"></div>
-            </div>
-            <div class="draggable" draggable="true">
-                <p>Widget</p>
-                <div class="delete-button"></div>
-            </div>
-            <div class="draggable" draggable="true">
-                <p>Widget</p>
-                <div class="delete-button"></div>
-            </div>
-        </div>
+        <?php
+        Progress();
+        ?>
 
         <div class="sidebar-footer">
             <a href="javascript:void(0)" class="button button-primary" onclick="closeNav()">Done</a>
