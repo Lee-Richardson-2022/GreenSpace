@@ -14,13 +14,13 @@
     <div class="image-wrapper">
       <div class='Greenspace-image'>
         <a href="/GreenSpace/HomePage.php" >
-          <img border="0" alt="User Icon" src="Assets/greenspace-logo.png" width="150" height="150">
+          <img src="Assets/greenspace-logo.png" width="150" height="150">
         </a>
         <p>Waterman group</p>
       </div>
       <div class='Construction-image'>
         <a href="/GreenSpace/HomePage.php" >
-          <img border="0" alt="User Icon" src="Assets/Construction.jpg" width="150" height="150">
+          <img src="Assets/Construction.jpg" width="150" height="150">
         </a>
       </div>
     </div>

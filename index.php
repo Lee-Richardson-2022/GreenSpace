@@ -1,5 +1,3 @@
-<?php require("navbar.php");?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -57,9 +55,7 @@
         </div>
     </div>
 
-<?php //require("navbar.php"); // adding the navbar
-
-?>
+<?php require("navbar.php");?>
     
 <div class="main-container">
     <h1>My Performance Dashboard</h1>

@@ -1,12 +1,4 @@
-body{
-  margin: 0;
-  overflow: hidden;
-  width: 100vw;
-}
 
-*{
-  box-sizing: border-box;
-}
 
 .navbar {
     background-color: #28544c;
@@ -66,31 +58,36 @@ body{
   }
 
   .Greenspace-image {
-    margin-top: 75px; 
-    margin-left: 105px;
+    margin: auto;
+    height: 300px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
   }
-
-  .Greenspace-image img {
-    border: 0px;
-    height: 170px;
-    width: 130px;
-    margin-left: 75px;
+  .Greenspace-image p{
+    font-weight: bold;
+    font-size: 20px;
+    margin: 10px;
+    
   }
-
-  .Greenspace-image p {
-    margin-left: 80px; 
-    margin-top: 30px;
+  .Greenspace-image img{
+    margin-top: 10px;
+    width: 180px;
+    height: auto;
   }
 
   .Construction-image img {
-    border: 0px;
-    height: 350px;
-    width: 1400px;
+    height: auto;
+    width: 80vw;
   }
 
   .image-wrapper {
     display: flex;
     justify-content: space-between;
+    overflow: hidden;
+    height: 300px;
   }
 
   .dropdown {
