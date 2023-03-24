@@ -201,6 +201,7 @@ h1{
 #edit-btn{
     display: block;
 }
+
 .delete-button{
     z-index: 99;
     border: none;
@@ -212,4 +213,6 @@ h1{
     height: 50px;
     background-color: rgba(var(--danger), 1);
     border-radius: 0 20px 0 5px;
+    font-size: 35px;
+    color: var(--white);
 }

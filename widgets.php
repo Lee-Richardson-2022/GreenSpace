@@ -1,9 +1,13 @@
 <?php
 
+function DelBtn(){ ?>
+    <button class="delete-button">&times</button>
+<?php } 
+
 function Timeline(){ ?>
 
 <div class="draggable wide" draggable="false" id="timeline">
-    <button class="delete-button"></button>
+    <?php DelBtn() ?>
     <p>Timeline</p>
 </div> 
 
@@ -14,7 +18,7 @@ function Timeline(){ ?>
 function Progress(){ ?>
 
 <div class="draggable" draggable="false" id="progress">
-    <button class="delete-button"></button>
+    <?php DelBtn() ?>
     <p>Progress</p>
 </div> 
 

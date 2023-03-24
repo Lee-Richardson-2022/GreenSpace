@@ -40,18 +40,23 @@ function getDragAfterElement(container, y) {
 
 // Sidebar
 
+// Sidebar Opened
 function openNav() {
   document.getElementById("add-widget-sidebar").style.visibility = "visible";
 }
 
+// Sidebar Closed
 function closeNav() {
   document.getElementById("add-widget-sidebar").style.visibility = "hidden";
 }
 
+//On Edit button pressed
 function startEdit() {
   document.getElementById("edit").style.display = "none";
   document.getElementById("editing").style.display = "block";
 
+
+  // Shows delete buttons on dashboard widgets 
   const delButtons = document
   .getElementById('main')
   .getElementsByClassName("delete-button");
@@ -60,6 +65,7 @@ function startEdit() {
     delButtons[i].style.visibility = "visible";
   }
 
+  // Sets widgets to draggable once edit mode enabled
   const draggables = document
   .getElementsByClassName("draggable")
 
@@ -68,11 +74,14 @@ function startEdit() {
   }
 
 }
+
+// On done button pressed
 function endEdit() {
   document.getElementById("edit").style.display = "block";
   document.getElementById("editing").style.display = "none";
   document.getElementById("add-widget-sidebar").style.visibility = "hidden";
 
+  // Hides delete buttons
   const widgets = document
   .getElementById('main')
   .getElementsByClassName("delete-button");
@@ -81,6 +90,7 @@ function endEdit() {
     widgets[i].style.visibility = "hidden";
   }
 
+  // Sets widgets to static(none draggable)
   const draggables = document
   .getElementsByClassName("draggable")
 
