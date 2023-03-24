@@ -3,7 +3,7 @@
   <head>
     <title>My Website</title>
     <link rel="stylesheet" type="text/css" href="waterman.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="Dropdown.js"></script>
   </head>
 
   <body>
@@ -14,49 +14,44 @@
     <div class="image-wrapper">
       <div class='Greenspace-image'>
         <a href="/GreenSpace/HomePage.php" >
-          <img border="0" alt="User Icon" src="greenspace-logo.png" width="150" height="150">
+          <img border="0" src="Assets/greenspace-logo.png">
         </a>
         <p>Waterman group</p>
       </div>
       <div class='Construction-image'>
         <a href="/GreenSpace/HomePage.php" >
-          <img border="0" alt="User Icon" src="Construction.jpg" width="150" height="150">
+          <img border="0" src="Assets/Construction.jpg">
         </a>
       </div>
     </div>
-
+    
     <div class="navbar-2">
-      <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-          Improvement tracker
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          <li ><a class="dropdown-item" href="#">Action</a></li>
-          <li><a class="dropdown-item" href="#">Another action</a></li>
-          <li><a class="dropdown-item" href="#">Something else here</a></li>
-        </ul>
-      </div>
-      <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-          Performance dashboard
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          <li><a class="dropdown-item" href="#">Action</a></li>
-          <li><a class="dropdown-item" href="#">Another action</a></li>
-          <li><a class="dropdown-item" href="#">Something else here</a></li>
-        </ul>
-      </div>
-      <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-          Docs
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          <li><a class="dropdown-item" href="#">Action</a></li>
-          <li><a class="dropdown-item" href="#">Another action</a></li>
-          <li><a class="dropdown-item" href="#">Something else here</a></li>
-        </ul>
+      <div class="dropdown-wrapper">
+        <div class="dropdown">
+          <select id="myDropdown1">
+            <option value="option1">Bulletin Board</option>
+          </select>
+        </div>
+        <div class="dropdown">
+          <select id="myDropdown2">
+            <option value="option1">Improvement Tracker</option>
+            <option value="option2">Planner</option>
+            <option value="option3">Manage Actions</option>
+            <option value="option4">Settings</option>
+          </select>
+        </div>
+        <div class="dropdown">
+          <select id="myDropdown3">
+            <option value="option1">Performance Dashboard</option>
+          </select>
+        </div>
+        <div class="dropdown">
+          <select id="myDropdown3">
+            <option value="option1">Docs</option>
+            <option value="option2">Admin</option>
+          </select>
+        </div>
       </div>
     </div>
   </body>
 </html>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
