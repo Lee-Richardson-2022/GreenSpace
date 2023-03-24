@@ -224,6 +224,7 @@ h1{
     background-color: var(--main-bg-color);
     z-index: 999;
     padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 .chart-container{
