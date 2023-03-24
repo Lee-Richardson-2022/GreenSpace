@@ -17,7 +17,6 @@
 <div class="sidebar" id="add-widget-sidebar">
         <div class="sidebar-title">
             <h2>Add Widgets</h2>
-            <p>Drag and Drop Widgets onto your Dashboard</p>
         </div>
 
         <div class="sidebar-scroll">

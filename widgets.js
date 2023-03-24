@@ -52,12 +52,19 @@ function startEdit() {
   document.getElementById("edit").style.display = "none";
   document.getElementById("editing").style.display = "block";
 
-  const widgets = document
+  const delButtons = document
   .getElementById('main')
   .getElementsByClassName("delete-button");
 
-  for (let i = 0; i < widgets.length; i++) {
-    widgets[i].style.visibility = "visible";
+  for (let i = 0; i < delButtons.length; i++) {
+    delButtons[i].style.visibility = "visible";
+  }
+
+  const draggables = document
+  .getElementsByClassName("draggable")
+
+  for (let i = 0; i < draggables.length; i++) {
+    draggables[i].setAttribute("draggable", "true")
   }
 
 }
@@ -72,5 +79,12 @@ function endEdit() {
 
   for (let i = 0; i < widgets.length; i++) {
     widgets[i].style.visibility = "hidden";
+  }
+
+  const draggables = document
+  .getElementsByClassName("draggable")
+
+  for (let i = 0; i < draggables.length; i++) {
+    draggables[i].setAttribute("draggable", "false")
   }
 }
