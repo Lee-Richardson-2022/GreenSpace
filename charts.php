@@ -189,6 +189,7 @@ function chartOutstandingActions($location) { //Configures chartConfig, then sen
                         "valuefontsize": "20",
                         "valueFontColor": "#FFFFFF",
                         "showToolTip": "0",
+                        "showHoverEffect" : "0",
                         "theme": "fusion"
                     },
                     "colorRange": {
