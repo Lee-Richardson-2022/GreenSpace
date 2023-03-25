@@ -1,11 +1,11 @@
 /*-- fonts --*/
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
-*{
+* {
     box-sizing: border-box;
 }
 
-.main-container{
+.main-container {
     padding: 0 5vw 0 5vw;
     height: 300vh;
 }
@@ -22,13 +22,13 @@
 
 /*-- body --*/
 
-body{
+body {
     background-color: var(--main-bg-color) !important;
     margin: 0;
 }
 
 /*-- Text --*/
-*{
+* {
     font-family: "IBM Plex Sans", serif;
     color: var(--main-text-colour);
 
@@ -36,11 +36,11 @@ body{
     user-select: none;
 }
 
-.data-font{
+.data-font {
     font-family: "IBM Plex Mono", monospace;
 }
 
-h1{
+h1 {
     font-size: 32px;
     font-weight: 600;
 
@@ -48,7 +48,7 @@ h1{
 }
 
 /*-- Buttons --*/
-.button{
+.button {
     text-decoration: none;
     font-weight: 500;
     font-size: 20px;
@@ -61,33 +61,33 @@ h1{
 }
 
 /* Primary */
-.button-primary{
+.button-primary {
     background-color: rgba(var(--primary), 1);
 }
-.button-primary:hover{
+.button-primary:hover {
     background-color: rgba(var(--primary), 0.8);
 }
 .button-primary:active,
-.button-primary.current{
+.button-primary.current {
     background-color: rgba(var(--primary), 1);
     box-shadow: 0 0 0 4px rgba(var(--primary), 0.5);   
 }
 
 /* Warning */
-.button-warning{
+.button-warning {
     background-color: rgba(var(--warning), 1);
 }
-.button-warning:hover{
+.button-warning:hover {
     background-color: rgba(var(--warning), 0.8);
 }
 .button-warning:active,
-.button-warning.current{
+.button-warning.current {
     background-color: rgba(var(--warning), 1);
     box-shadow: 0 0 0 4px rgba(var(--warning), 0.5);   
 }
 
 /* Danger */
-.button-danger{
+.button-danger {
     background-color: rgba(var(--danger), 1);
 }
 .button-danger:hover{
@@ -99,7 +99,7 @@ h1{
     box-shadow: 0 0 0 4px rgba(var(--danger), 0.5);   
 }
 /* Secondary */
-.button-secondary{
+.button-secondary {
     background: none;
     border: none;
 
@@ -110,11 +110,11 @@ h1{
     font-weight: 400;
     font-size: 16px;
 }
-.button-secondary:hover{
+.button-secondary:hover {
     text-decoration: underline;
 }
 
-.timeline-button{
+.timeline-button {
 
     border-radius: 10px;
     width: 20px; 
@@ -127,11 +127,11 @@ h1{
 
     transition: border-width 0.15s ease-in-out;
 }
-.timeline-button:hover{
+.timeline-button:hover {
     border-width: 6;
 }
 .timeline-button:active,
-.timeline-button.current{
+.timeline-button.current {
     border-width: 6;
     border-color: rgba(var(--primary), 1);
 }
@@ -166,7 +166,7 @@ h1{
 
   /*-- Sidebar --*/
 
-  .sidebar{
+  .sidebar {
     visibility: hidden;
     display: flex;
     align-items: center;
@@ -182,28 +182,28 @@ h1{
     flex-direction: column;
     align-content: center;
   }
-  .sidebar-scroll{
+  .sidebar-scroll {
     height: 85vh;
     overflow: scroll;
     width: 340px;
   }
-  .sidebar-title{
+  .sidebar-title {
     height: 10vh;
     width: 25vw;
   }
-  .sidebar-footer{
+  .sidebar-footer {
     height: 5vh;
     padding-top: auto;
   }
 
-#editing{
+#editing {
     display: none;
 }
-#edit-btn{
+#edit-btn {
     display: block;
 }
 
-.delete-button{
+.delete-button {
     z-index: 99;
     border: none;
     visibility: hidden;
@@ -218,7 +218,7 @@ h1{
     color: var(--white);
 }
 
-.dashboard-header{
+.dashboard-header {
     position: sticky;
     top: 0;
     background-color: var(--main-bg-color);
@@ -227,6 +227,6 @@ h1{
     padding-top: 10px;
 }
 
-.chart-container{
+.chart-container {
     height: 280px ;
 }
