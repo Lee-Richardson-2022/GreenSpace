@@ -96,6 +96,8 @@ function chartLegalCompliancePie($location) { //Configures chartConfig, then sen
                         "enableSmartLabels": "0",
                         "showLabels": "0",
                         "showValues": "0",
+                        "enableSlicing": "0",
+                        "enableRotation": "0",
                         "theme": "fusion"
                         },
 
