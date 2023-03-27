@@ -13,8 +13,7 @@
 
     <div class="grid">
         <div class="item">
-            <div class="item-content">
-                One
+            <div class="item-content" id="compliance-pie">
             </div>
         </div>
         <div class="item">
@@ -45,7 +44,7 @@
 
     <script>
         const grid = new Muuri('.grid', {
-            dragEnabled: true
+            dragEnabled: true,
         });
     </script>
 </body>

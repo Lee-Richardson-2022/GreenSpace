@@ -12,18 +12,25 @@ body{
     position: absolute;
     text-align: center;
 
-    height: 200px;
-    width: 200px;
-    line-height: 200px;
+    height: 300px;
+    width: 300px;
+    line-height: 300px;
 
-    margin: 5px;
+    margin-right: 20px;
+    margin-bottom: 20px;
     z-index: 1;
+
+    color: #1D1D1D;
+    background-color: #FFF;
+
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.05);
 }
 .item.tall {
-    height: 410px;
+    height: 620px;
 }
 .item.wide {
-    width: 410px;
+    width: 620px;
 }
 .item.muuri-item-dragging {
     z-index: 3;
@@ -34,6 +41,12 @@ body{
 .item.muuri-item-hidden {
     z-index: 0;
 }
+.item.muuri-item-dragging .item-content {
+    border-radius: 20px;
+}
+.item.muuri-item-releasing .item-content {
+    border-radius: 20px;
+}
 .item-content {
     position: relative;
 
@@ -42,16 +55,6 @@ body{
 
     cursor: pointer;
 
-    color: #FFF;
-    background-color: grey;
-
     font-size: 40px;
     text-align: center;
-}
-
-.item.muuri-item-dragging .item-content {
-    background-color: lightgray;
-}
-.item.muuri-item-releasing .item-content {
-    background-color: red;
 }
