@@ -52,7 +52,11 @@
                     <div class="cal-info">
                         <div class="cal-block-not-null">
                             <div class="bar danger"></div>
-                            <div class="content danger"></div>
+                            <div class="content danger">
+                                <div class="warning-box"></div>
+                                <div class="ref">RE-F</div>
+                                <div class="content-date">--/--/----</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -61,7 +65,10 @@
                     <div class="cal-info">
                         <div class="cal-block-not-null">
                             <div class="bar warning"></div>
-                            <div class="content warning"></div>
+                            <div class="content warning">
+                                <div class="ref">RE-F</div>
+                                <div class="content-date">--/--/----</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -85,6 +92,7 @@
 
     <script>
         const grid = new Muuri('.grid', {
+            fillGaps: true,
             dragEnabled: true,
         });
     </script>

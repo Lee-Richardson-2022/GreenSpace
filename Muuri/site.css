@@ -173,6 +173,10 @@ body{
 }
 
 .content {
+
+    position: relative;
+
+    
     width: 220px;
     height: 40px;
 
@@ -181,30 +185,50 @@ body{
 }
 .content.completed {
     background-color: rgba(var(--primary), 0.2);
+    color: #24946B;
 }
 .content.warning {
     background-color: rgba(var(--warning), 0.2);
+    color: #AF8A0F;
 }
 .content.danger {
     background-color: rgba(var(--danger), 0.2);
+    color: #B24142;
 }
 
 .ref {
     font-size: 15px;
     font-weight: 600;
 
-    height: 17px;
+    height: 15px;
     
-    padding: auto;
+    padding: 0;
     margin: 0;
 
 }
 .content-date {
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 600;
 
-    height: 11px;
+    height: 10px;
 
     padding: 0;
     margin: 0;
+
+    margin-top: 2px;
+
+    opacity: 0.6;
+}
+
+.warning-box {
+    height: 34px;
+    width: 34px;
+
+    border-radius: 3px;
+
+    background-color: rgb(var(--danger));
+
+    position: absolute;
+    right: 3px;
+    top: 3px;
 }
