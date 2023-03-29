@@ -23,7 +23,48 @@
         </div>
         <div class="item tall">
             <div class="item-content">
-                Three
+                <h3 class="widget-header">TODAY</h3>
+                <h2 class="cal-date">29th March</h2>
+
+                <div class="due-today">
+                </div>
+
+                <div class="cal-block">
+                    <div class="cal-block-date">30</div>
+                    <div class="cal-info">
+                        <div class="cal-block-empty"></div>
+                    </div>
+                </div>
+                <div class="cal-block">
+                    <div class="cal-block-date">31</div>
+                    <div class="cal-info">
+                        <div class="cal-block-not-null">
+                            <div class="bar completed"></div>
+                            <div class="content completed">
+                                <div class="ref">RE-F</div>
+                                <div class="content-date">--/--/----</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cal-block">
+                    <div class="cal-block-date">1</div>
+                    <div class="cal-info">
+                        <div class="cal-block-not-null">
+                            <div class="bar danger"></div>
+                            <div class="content danger"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cal-block">
+                    <div class="cal-block-date">2</div>
+                    <div class="cal-info">
+                        <div class="cal-block-not-null">
+                            <div class="bar warning"></div>
+                            <div class="content warning"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="item">
