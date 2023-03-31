@@ -1,15 +1,10 @@
 <?php
 include_once('charts.php');
 
-function DelBtn(){ ?>
-    <button class="delete-button">&times</button>
-<?php } 
-
 function ComplianceBar(){ ?>
 
-<div class="draggable wide" draggable="false">
-    <?php DelBtn() ?>
-    <div id="compliance-bar" class="chart-container">
+<div class="item wide">
+    <div id="compliance-bar" class="item-content">
         <?php chartLegalComplianceBar('compliance-bar');
         ?>
     </div>
@@ -19,30 +14,19 @@ function ComplianceBar(){ ?>
 
 function CompliancePie(){ ?>
 
-    <div class="draggable" draggable="false">
-        <?php DelBtn() ?>
-        <div id="compliance-pie" class="chart-container">
+    <div class="item">
+        <div id="compliance-pie" class="item-content">
             <?php chartLegalCompliancePie('compliance-pie');
             ?>
         </div>
     </div> 
-    
-    <?php } 
 
-function Progress(){ ?>
-
-<div class="draggable" draggable="false" id="progress">
-    <?php DelBtn() ?>
-    <p>Progress</p>
-</div> 
-
-<?php } 
+<?php }
 
 function Bulb(){ ?>
 
-    <div class="draggable" draggable="false">
-        <?php DelBtn(); ?>
-        <div id="bulb" class="chart-container">
+    <div class="item">
+        <div id="bulb" class="item-content">
             <?php chartOutstandingActions('bulb');
             ?>
         </div>
@@ -52,9 +36,8 @@ function Bulb(){ ?>
 
 function DueActions(){ ?>
 
-    <div class="draggable" draggable="false">
-        <?php DelBtn() ?>
-        <div id="due-actions" class="chart-container">
+    <div class="item">
+        <div id="due-actions" class="item-content">
             <?php chartDueActions('due-actions');
             ?>
         </div>
