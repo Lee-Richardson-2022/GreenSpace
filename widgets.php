@@ -3,7 +3,7 @@ include_once('charts.php');
 
 function ComplianceBar(){ ?>
 
-<div class="item wide">
+<div class="item wide" data-id="1">
     <div id="compliance-bar" class="item-content">
         <?php chartLegalComplianceBar('compliance-bar');
         ?>
@@ -14,7 +14,7 @@ function ComplianceBar(){ ?>
 
 function CompliancePie(){ ?>
 
-    <div class="item">
+    <div class="item" data-id="2">
         <div id="compliance-pie" class="item-content">
             <?php chartLegalCompliancePie('compliance-pie');
             ?>
@@ -25,7 +25,7 @@ function CompliancePie(){ ?>
 
 function Bulb(){ ?>
 
-    <div class="item">
+    <div class="item" data-id="3">
         <div id="bulb" class="item-content">
             <?php chartOutstandingActions('bulb');
             ?>
@@ -36,7 +36,7 @@ function Bulb(){ ?>
 
 function DueActions(){ ?>
 
-    <div class="item">
+    <div class="item" data-id="4">
         <div id="due-actions" class="item-content">
             <?php chartDueActions('due-actions');
             ?>

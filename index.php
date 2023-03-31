@@ -40,8 +40,6 @@
             <button class="button-secondary" onclick="endEdit()">done</button>
         </div>
     </div>
-    <div style="display: flex;">
-    </div>
 
     <div class="grid">
         <?php 
