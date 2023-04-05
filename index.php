@@ -58,22 +58,26 @@
 
         <div class="item wide" data-id="1">
             <div id="compliance-bar" class="item-content">
-            <script>chartLegalComplianceBar('compliance-bar')</script>       
+            <script>chartLegalComplianceBar('compliance-bar')</script>
+            </div>    
         </div>
 
         <div class="item" data-id="2">
             <div id="compliance-pie" class="item-content">
-            <script>chartLegalCompliancePie('compliance-pie')</script>            
+            <script>chartLegalCompliancePie('compliance-pie')</script>       
+            </div>     
         </div>
 
         <div class="item" data-id="3">
             <div id="bulb" class="item-content">
-            <script>chartOutstandingActions('bulb')</script>            
+            <script>chartOutstandingActions('bulb')</script>  
+            </div>          
         </div>
 
         <div class="item" data-id="4">
             <div id="due-actions" class="item-content">
-            <script>chartDueActions('due-actions')</script>            
+            <script>chartDueActions('due-actions')</script>     
+            </div>       
         </div>
 
     </div> 
