@@ -8,8 +8,15 @@
     
     <link rel="stylesheet" href="site.css">
 
-    <?php include_once('widgets.php');
-    ?>
+    <!-- Include fusioncharts core library -->
+    <script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>
+    <!-- Include fusion theme -->
+    <script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"></script>
+    <!-- Get jquery, hosted by google -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <script src="charts.js"></script>
+    
 
 </head>
 <body>
@@ -42,12 +49,35 @@
     </div>
 
     <div class="grid">
-        <?php 
-        ComplianceBar();
-        CompliancePie();
-        Bulb();
-        DueActions();
-        ?>
+        <!-- <script>
+            chartLegalComplianceBar()
+            chartLegalCompliancePie()
+            chartOutstandingActions()
+            chartDueActions()
+        </script> -->
+
+        <div class="item wide" data-id="1">
+            <div id="compliance-bar" class="item-content">
+            <script>chartLegalComplianceBar('compliance-bar')</script>       
+        </div>
+
+        <div class="item" data-id="2">
+            <div id="compliance-pie" class="item-content">
+            <script>chartLegalCompliancePie('compliance-pie')</script>            
+        </div>
+
+        <div class="item" data-id="3">
+            <div id="bulb" class="item-content">
+            <script>chartOutstandingActions('bulb')</script>            
+        </div>
+
+        <div class="item" data-id="4">
+            <div id="due-actions" class="item-content">
+            <script>chartDueActions('due-actions')</script>            
+        </div>
+
+    </div> 
+    </div> 
     </div>
 </div>
 
@@ -57,6 +87,7 @@
     <script src="https://cdn.jsdelivr.net/npm/web-animations-js@2.3.2/web-animations.min.js"></script>
 
     <script src="widgets.js"></script>
+
 
 </body>
 </html>
