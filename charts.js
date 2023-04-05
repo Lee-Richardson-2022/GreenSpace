@@ -20,9 +20,6 @@ function fetchData(query){
         data: {query: query},
         dataType: "json",
         success: function(data) {
-            // Run the code here that needs
-            //    to access the data returned
-            
             result = data
             return data;
         },
@@ -30,22 +27,6 @@ function fetchData(query){
             alert('Error occured');
         }
     });
-
-    /*
-    $.post('fetchData.php',
-    {
-        query: query
-    }, 
-    function(data, status){
-        alert("Data: " + data + "\nStatus: " + status);
-        console.log(data)
-        result = data;
-        return result
-    }
-    );
-    */
-
-
     return result
     
 }

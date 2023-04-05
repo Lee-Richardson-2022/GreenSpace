@@ -49,12 +49,6 @@
     </div>
 
     <div class="grid">
-        <!-- <script>
-            chartLegalComplianceBar()
-            chartLegalCompliancePie()
-            chartOutstandingActions()
-            chartDueActions()
-        </script> -->
 
         <div class="item wide" data-id="1">
             <div id="compliance-bar" class="item-content">
