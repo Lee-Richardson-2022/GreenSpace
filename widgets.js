@@ -81,3 +81,4 @@ function endEdit() {
   document.getElementById("add-widget-sidebar").style.visibility = "hidden";
   editMode = false;
 }
+

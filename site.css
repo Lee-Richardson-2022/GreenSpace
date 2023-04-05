@@ -237,7 +237,7 @@ h1 {
 .delete-button {
     z-index: 99;
     border: none;
-    visibility: hidden;
+    visibility: visible;
     position: absolute;
     top: 0;
     right: 0;
@@ -247,7 +247,7 @@ h1 {
     border-radius: 0 20px 0 5px;
     font-size: 35px;
     color: var(--white);
-    transition: background-color 0.15s ease-in-out;
+    transition: 0.15s ease-in-out;
 }
 .delete-button:hover {
     background-color: rgba(var(--danger), 0.8);

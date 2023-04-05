@@ -3,6 +3,31 @@ var colourAmber = "#fac515"
 var colourGreen = "#34d399"
 var result;
 
+function generateContainer(id, dataId, dimensions) {
+    const mainDiv = document.querySelector('.grid');
+    const itemDiv = document.createElement('div');
+    itemDiv.classList.add('item');
+
+    const deleteButton = document.createElement('button');
+    deleteButton.classList.add('delete-button');
+    deleteButton.onclick = function() {DeleteClicked(dataId)};
+
+    if(dimensions !== '') {
+        itemDiv.classList.add(dimensions);
+    }
+
+
+    itemDiv.setAttribute('data-id', dataId)
+
+    const contentDiv = document.createElement('div');
+    contentDiv.classList.add('item-content');
+    contentDiv.id = id;
+
+    itemDiv.appendChild(deleteButton);
+    itemDiv.appendChild(contentDiv);
+    mainDiv.appendChild(itemDiv);
+}
+
 function renderChart(chartConfig) { //Draws the chart
     FusionCharts.ready(function(){
     var fusioncharts = new FusionCharts(chartConfig);
@@ -12,7 +37,6 @@ function renderChart(chartConfig) { //Draws the chart
 
 function fetchData(query){
 
-
     $.ajax({
         type: "POST",
         url: 'fetchData.php',
@@ -20,7 +44,7 @@ function fetchData(query){
         data: {query: query},
         dataType: "json",
         success: function(data) {
-            result = data
+            result = data;
             return data;
         },
         error: function() {
@@ -34,10 +58,10 @@ function fetchData(query){
 
 function chartLegalComplianceBar(location) { //Configures chartConfig, then sends it to be rendered    
     const data = fetchData('SELECT RedCompliance, AmberCompliance, GreenCompliance FROM LegalRegister WHERE ClientID = 1');
-
+    generateContainer(location, 1, 'wide');
     var chartConfig = {
     type: 'column2d', //Chart type, a list of chart types is listed of fusionchart's website:
-    renderAt: location, //The id of the element where the chart is drawn
+    renderAt: location, //The id of the element where the chart is drawn, hardcode this
     width: '100%',
     height: '100%',
     dataFormat: 'json',
@@ -75,7 +99,7 @@ function chartLegalComplianceBar(location) { //Configures chartConfig, then send
 
 function chartLegalCompliancePie(location) { //Configures chartConfig, then sends it to be rendered
     const data = fetchData('SELECT RedCompliance, AmberCompliance, GreenCompliance FROM LegalRegister WHERE ClientID = 1');
-
+        generateContainer(location, 2, '');
         var chartConfig = {
         type: 'pie2d', //Chart type, a list of chart types is listed of fusionchart's website:
         renderAt: location, //The id of the element where the chart is drawn
@@ -122,8 +146,7 @@ function chartLegalCompliancePie(location) { //Configures chartConfig, then send
 
 function chartDueActions(location) { //Configures chartConfig, then sends it to be rendered
     const data = fetchData('SELECT COUNT(*) FROM ClientTask WHERE ClientID = 1 AND Status = "Due"')
-    //const data = ['4']
-    
+        generateContainer(location, 3, '');
         var chartConfig = {
         type: 'angulargauge',
         renderAt: location,
@@ -168,7 +191,7 @@ function chartDueActions(location) { //Configures chartConfig, then sends it to 
 
 function chartOutstandingActions(location) { //Configures chartConfig, then sends it to be rendered
     const data = fetchData('SELECT COUNT(*) FROM ClientTask WHERE ClientID = 1 AND Status = "Outstanding"');
-      
+        generateContainer(location, 4, '');
         var chartConfig = {
         type: 'bulb',
         renderAt: location,
