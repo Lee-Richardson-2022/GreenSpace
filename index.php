@@ -14,7 +14,7 @@
     <script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"></script>
     <!-- Get jquery, hosted by google -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <script src="charts.js"></script>
+    
 
 </head>
 <body>
@@ -57,57 +57,11 @@
     <script src="https://cdn.jsdelivr.net/npm/muuri@0.9.5/dist/muuri.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js" integrity="sha512-UXumZrZNiOwnTcZSHLOfcTs0aos2MzBWHXOHOuB0J/R44QB0dwY5JgfbvljXcklVf65Gc4El6RjZ+lnwd2az2g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/web-animations-js@2.3.2/web-animations.min.js"></script>
-
+    <script src="charts.js" defer></script>
     <script src="widgets.js" defer></script>
 
     <script>
-        drawCharts();
-
-        function drawCharts(grid) {
-        const gridDiv = document.querySelector(".grid");
-        while (gridDiv.firstChild){
-            gridDiv.removeChild(gridDiv.firstChild);
-        }
-
-        if (localStorage.getItem("layout") !== null) {
-        const charts = JSON.parse(window.localStorage.getItem('layout'));
-        for(let i = 0; i < charts.length; i++){
-            console.log(charts[i]);
-            switch (charts[i]) {
-                case "1":
-                    chartLegalComplianceBar('compliance-bar')
-                    break;
-                case "2":
-                    chartLegalCompliancePie('compliance-pie')
-                    break;
-                case "3":
-                    chartDueActions('due-actions')
-                    break;
-                case "4":              
-                    chartOutstandingActions('bulb')
-                    break;
-                }
-                
-            }
-            
-        }
-        }
-
-        function DeleteClicked(id) {
-        console.log("yay!");
-        const charts = JSON.parse(window.localStorage.getItem('layout'));
         
-        for(let i = 0; i < charts.length; i++){
-            if(charts[i] == id){
-                charts.splice(id, 1);
-            }
-        }
-
-        
-        window.localStorage.setItem('layout', JSON.stringify(charts));
-        drawCharts();
-
-        }
     </script>
 
 </body>

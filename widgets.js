@@ -20,6 +20,37 @@ function initGrid() {
   } else {
     grid.layout(true);
   }
+
+
+  var charts = JSON.parse(layout);
+
+  for(let i = 0; i < layout.length; i++){
+    switch (charts[i]) {
+      case "1":
+        grid.add(generateContainer('compliance-bar', 1, 'wide'));
+        break;
+      case "2":
+        grid.add(generateContainer('compliance-pie', 2, ''));
+        break;
+      case "3":
+        grid.add(generateContainer('due-actions', 3, ''));
+        break;
+      case "4":              
+        grid.add(generateContainer('outstanding-actions', 4, ''));
+        break;
+      }
+  }
+
+
+
+/*
+  grid.add(generateContainer('compliance-pie', 2, ''));
+  grid.add(generateContainer('due-actions', 3, ''));
+  chartLegalCompliancePie();
+  chartDueActions();
+*/
+  saveLayout(grid);
+  drawCharts(grid);
 }
 
 function serializeLayout(grid) {
@@ -32,6 +63,13 @@ function serializeLayout(grid) {
 function saveLayout(grid) {
   var layout = serializeLayout(grid);
   window.localStorage.setItem('layout', layout);
+}
+
+function getLayout(asArray) { //Fetches the layout from local storage, in either an array or JSON format
+  if (asArray) {
+    return JSON.parse(window.localStorage.getItem('layout'));
+  }
+  return window.localStorage.getItem('layout');
 }
 
 function loadLayout(grid, serializedLayout) {
@@ -80,5 +118,49 @@ function endEdit() {
   document.getElementById("editing").style.display = "none";
   document.getElementById("add-widget-sidebar").style.visibility = "hidden";
   editMode = false;
+}
+
+
+//drawCharts();
+
+function drawCharts(grid) {
+      
+  const charts = JSON.parse(serializeLayout(grid));
+  
+  for(let i = 0; i < charts.length; i++){
+    switch (charts[i]) {
+      case "1":
+        chartLegalComplianceBar()
+        break;
+      case "2":
+        chartLegalCompliancePie()
+        break;
+      case "3":
+        chartDueActions()
+        break;
+      case "4":              
+        chartOutstandingActions()
+        break;
+    }
+                
+  }
+            
+}
+        
+
+function DeleteClicked(dataId) {
+
+  const charts = getLayout(true)
+        
+  for(let i = 0; i < charts.length; i++){
+    if(charts[i] == id){
+      charts.splice(id, 1);
+    }
+  }
+
+        
+  window.localStorage.setItem('layout', JSON.stringify(charts));
+  drawCharts();
+
 }
 
