@@ -1,10 +1,11 @@
 // Muuri
-var editMode
+var editMode;
+var grid;
 
 initGrid();
 
 function initGrid() {
-  var grid = new Muuri('.grid', {
+  grid = new Muuri('.grid', {
     dragEnabled: true,
     dragStartPredicate: function () {    
       return editMode;
@@ -39,6 +40,7 @@ function initGrid() {
         grid.add(generateContainer('outstanding-actions', 4, ''));
         break;
       }
+      
   }
 
 
@@ -150,17 +152,14 @@ function drawCharts(grid) {
 
 function DeleteClicked(dataId) {
 
-  const charts = getLayout(true)
-        
+  const charts = JSON.parse(serializeLayout(grid));
+  
   for(let i = 0; i < charts.length; i++){
-    if(charts[i] == id){
-      charts.splice(id, 1);
+    if(charts[i] == dataId){      
+      grid.remove(grid.getItems(i), { removeElements: true });
     }
   }
-
-        
-  window.localStorage.setItem('layout', JSON.stringify(charts));
-  drawCharts();
-
+  saveLayout(grid);
+  drawCharts(grid);
 }
 

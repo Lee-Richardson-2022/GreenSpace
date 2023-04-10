@@ -16,7 +16,6 @@ chartOutstandingActions(),  outstanding-actions
 */
 
 function generateContainer(id, dataId, dimensions) {
-    //const mainDiv = document.querySelector('.grid');
     const itemDiv = document.createElement('div');
     itemDiv.classList.add('item');
 
@@ -38,7 +37,6 @@ function generateContainer(id, dataId, dimensions) {
     itemDiv.appendChild(deleteButton);
     itemDiv.appendChild(contentDiv);
     return itemDiv
-    //mainDiv.appendChild(itemDiv);
 }
 
 function renderChart(chartConfig) { //Draws the chart
