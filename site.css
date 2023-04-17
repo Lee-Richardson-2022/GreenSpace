@@ -237,7 +237,7 @@ h1 {
 .delete-button {
     z-index: 99;
     border: none;
-    visibility: visible;
+    visibility: hidden;
     position: absolute;
     top: 0;
     right: 0;

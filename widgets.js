@@ -147,6 +147,11 @@ function startEdit() {
   document.getElementById("edit").style.display = "none";
   document.getElementById("editing").style.display = "block";
   editMode = true;
+
+  const delbtns = document.getElementsByClassName("delete-button");
+  for (let i = 0; i < delbtns.length; i++) {
+    delbtns[i].style.visibility = "visible";
+  }
 }
 
 // On done button pressed
@@ -155,6 +160,11 @@ function endEdit() {
   document.getElementById("editing").style.display = "none";
   document.getElementById("add-widget-sidebar").style.visibility = "hidden";
   editMode = false;
+
+  const delbtns = document.getElementsByClassName("delete-button");
+  for (let i = 0; i < delbtns.length; i++) {
+    delbtns[i].style.visibility = "hidden";
+  }
 }
 
 
