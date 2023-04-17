@@ -1,6 +1,7 @@
 // Muuri
 var editMode;
 var grid;
+var widgetsToAdd = [];
 
 initGrid(); //Initialises the grid, and recreates the stored layout
 
@@ -138,8 +139,40 @@ function openNav() {
 }
 
 // Sidebar Closed
-function closeNav() {
+function SidebarAddWidgets() {
   document.getElementById("add-widget-sidebar").style.visibility = "hidden";
+
+  addCharts(widgetsToAdd);
+  widgetsToAdd = [];
+
+  const delbtns = document.getElementsByClassName("delete-button");
+  for (let i = 0; i < delbtns.length; i++) {
+    delbtns[i].style.visibility = "visible";
+  }
+
+  const sidebarwidgets = document.getElementsByClassName("sidebar-widget");
+  for (let i = 0; i < sidebarwidgets.length; i++) {
+    sidebarwidgets[i].classList.remove("selected");
+  }
+}
+
+function SelectToggle(id) {
+
+  const widget = document.getElementById(id);
+  if (widget.classList.contains("selected")) {
+    widget.classList.remove("selected");
+    for( var i = 0; i < widgetsToAdd.length; i++) { 
+      if ( widgetsToAdd[i] === String(id)) { 
+        widgetsToAdd.splice(i, 1);
+      }
+    }
+  }
+  else {
+    widget.classList.add("selected");
+    widgetsToAdd.push(String(id))
+  }
+
+  console.log(widgetsToAdd);
 }
 
 //On Edit button pressed
@@ -166,5 +199,3 @@ function endEdit() {
     delbtns[i].style.visibility = "hidden";
   }
 }
-
-

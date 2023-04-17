@@ -213,18 +213,40 @@ h1 {
     flex-direction: column;
     align-content: center;
   }
-  .sidebar-scroll {
-    height: 85vh;
+  .sidebar-widget {
+    width: 11vw;
+    height: 11vw;
+    border-radius: 20px;
+    margin: 0.5vw;
+    background-color: var(--white);
+    box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.05);
+
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+  }
+  .sidebar-widget.selected {
+    border: rgb(var(--primary)) 5px solid;
+  }
+  .sidebar-widget.wide {
+    width: 23vw;
+  }
+  .sidebar-widget-container {
+    height: 75vh;
+    width: 25vw;
     overflow: scroll;
-    width: 340px;
+    margin-bottom: 5vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
   }
   .sidebar-title {
     height: 10vh;
-    width: 25vw;
   }
   .sidebar-footer {
     height: 5vh;
-    padding-top: auto;
+    padding-top: 15px;
+    width: fit-content;
   }
 
 #editing {

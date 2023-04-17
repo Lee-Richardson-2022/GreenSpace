@@ -23,9 +23,22 @@
         <div class="sidebar-title">
             <h2>Add Widgets</h2>
         </div>
-
+        <div class="sidebar-widget-container">
+            <div class="sidebar-widget wide" onclick="SelectToggle(1)" id="1">
+            Compliance <br> Bar Chart
+            </div>
+            <div class="sidebar-widget" onclick="SelectToggle(2)" id="2">
+            Compliance <br> Pie Chart
+            </div>
+            <div class="sidebar-widget" onclick="SelectToggle(3)" id="3">
+            Due Actions
+            </div>
+            <div class="sidebar-widget" onclick="SelectToggle(4)" id="4">
+            Outstanding Actions
+            </div>
+        </div>
         <div class="sidebar-footer">
-            <a href="javascript:void(0)" class="button button-primary" onclick="closeNav()">Done</a>
+            <a href="javascript:void(0)" class="button button-primary" onclick="SidebarAddWidgets()">Done</a>
         </div>
     </div> 
 
