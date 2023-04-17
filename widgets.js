@@ -2,7 +2,7 @@
 var editMode;
 var grid;
 
-initGrid();
+initGrid(); //Initialises the grid, and recreates the stored layout
 
 function initGrid() {
   grid = new Muuri('.grid', {
@@ -15,7 +15,7 @@ function initGrid() {
     saveLayout(grid);
   });
 
-  var layout = window.localStorage.getItem('layout');
+  var layout = getLayout(false);
   if (layout) {
     loadLayout(grid, layout);
   } else {
@@ -24,35 +24,8 @@ function initGrid() {
 
 
   var charts = JSON.parse(layout);
-
-  for(let i = 0; i < layout.length; i++){
-    switch (charts[i]) {
-      case "1":
-        grid.add(generateContainer('compliance-bar', 1, 'wide'));
-        break;
-      case "2":
-        grid.add(generateContainer('compliance-pie', 2, ''));
-        break;
-      case "3":
-        grid.add(generateContainer('due-actions', 3, ''));
-        break;
-      case "4":              
-        grid.add(generateContainer('outstanding-actions', 4, ''));
-        break;
-      }
-      
-  }
-
-
-
-/*
-  grid.add(generateContainer('compliance-pie', 2, ''));
-  grid.add(generateContainer('due-actions', 3, ''));
-  chartLegalCompliancePie();
-  chartDueActions();
-*/
-  saveLayout(grid);
-  drawCharts(grid);
+  addCharts(charts);
+  
 }
 
 function serializeLayout(grid) {
@@ -95,6 +68,68 @@ function loadLayout(grid, serializedLayout) {
   grid.sort(newItems, {layout: 'instant'});
 }
 
+function drawCharts(grid) { //Refreshes and re-draws the charts into their containers
+      
+  const charts = JSON.parse(serializeLayout(grid));
+  
+  for(let i = 0; i < charts.length; i++){
+    switch (charts[i]) {
+      case "1":
+        chartLegalComplianceBar()
+        break;
+      case "2":
+        chartLegalCompliancePie()
+        break;
+      case "3":
+        chartDueActions()
+        break;
+      case "4":              
+        chartOutstandingActions()
+        break;
+    }
+                
+  }
+            
+}
+
+        
+function addCharts(charts){ //Adds charts to the grid, takes array of charts, represented by data-id
+
+  for(let i = 0; i < charts.length; i++){
+    switch (charts[i]) {
+      case "1":
+        grid.add(generateContainer('compliance-bar', 1, 'wide'));
+        break;
+      case "2":
+        grid.add(generateContainer('compliance-pie', 2, ''));
+        break;
+      case "3":
+        grid.add(generateContainer('due-actions', 3, ''));
+        break;
+      case "4":              
+        grid.add(generateContainer('outstanding-actions', 4, ''));
+        break;
+    }      
+  }
+
+  saveLayout(grid);
+  drawCharts(grid);
+}
+
+
+function DeleteClicked(dataId) { //When an items delete button is clicked, remove the item
+
+  const charts = JSON.parse(serializeLayout(grid));
+  
+  for(let i = 0; i < charts.length; i++){
+    if(charts[i] == dataId){      
+      grid.remove(grid.getItems(i), { removeElements: true });
+    }
+  }
+  saveLayout(grid);
+  drawCharts(grid);
+}
+
 // Sidebar
 
 // Sidebar Opened
@@ -122,44 +157,4 @@ function endEdit() {
   editMode = false;
 }
 
-
-//drawCharts();
-
-function drawCharts(grid) {
-      
-  const charts = JSON.parse(serializeLayout(grid));
-  
-  for(let i = 0; i < charts.length; i++){
-    switch (charts[i]) {
-      case "1":
-        chartLegalComplianceBar()
-        break;
-      case "2":
-        chartLegalCompliancePie()
-        break;
-      case "3":
-        chartDueActions()
-        break;
-      case "4":              
-        chartOutstandingActions()
-        break;
-    }
-                
-  }
-            
-}
-        
-
-function DeleteClicked(dataId) {
-
-  const charts = JSON.parse(serializeLayout(grid));
-  
-  for(let i = 0; i < charts.length; i++){
-    if(charts[i] == dataId){      
-      grid.remove(grid.getItems(i), { removeElements: true });
-    }
-  }
-  saveLayout(grid);
-  drawCharts(grid);
-}
 
