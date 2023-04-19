@@ -17,15 +17,17 @@ function initGrid() {
   });
 
   var layout = getLayout(false);
+  
   if (layout) {
     loadLayout(grid, layout);
+    var charts = JSON.parse(layout);
+    addCharts(charts);
   } else {
     grid.layout(true);
   }
 
 
-  var charts = JSON.parse(layout);
-  addCharts(charts);
+
   
 }
 
